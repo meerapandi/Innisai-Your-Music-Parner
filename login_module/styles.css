@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+
+/* Navbar */
+header {
+    position: -webkit-sticky;  /* For Safari */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232f3e;
+    padding: 15px;
+    color: white;
+}
+h2{
+    
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+h3{
+    color: #f1f1f1;
+     text-align: center;
+     font-size: 55px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.search-bar {
+    display: flex;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    border: none;
+    padding: 8px;
+    width: 300px;
+    outline: none;
+}
+
+.search-bar button {
+    background: orange;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.cart {
+    font-size: 18px;
+}
+
+/* Slider Section */
+
+/* Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust this height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Add margin to push it below the header */
+}
+
+/* Image Styling */
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navigation Buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button.prev { left: 10px; }
+button.next { right: 10px; }
+
+
+/* Product Sections */
+/* Make product container appear below search bar */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px; /* Reduce margin so it stays close to search bar */
+    position: relative;
+    z-index: 10; /* Ensures it's above the slider */
+}
+
+
+.product {
+    width: 220px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+
+.product .details {
+    padding: 10px;
+}
+
+.product .title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product .price {
+    font-size: 18px;
+    color: #ff4500;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.product .description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+.parent {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product-section {
+    width: 98%;
+    padding: 10px;
+    background:rgb(17, 139, 155);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+ /* Contact Info */
+        .contact {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .contact a {
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+@media (max-width: 600px) {
+    .search-bar input { width: 150px; }
+    .items { flex-direction: column; align-items: center; }
+}

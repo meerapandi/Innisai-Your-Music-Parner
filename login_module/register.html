@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INISAI Registeration</title>
+    <link rel="stylesheet" href="style.css">  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="container">
+<h2>Let's Create an Account For <br> UNLIMITED HAPPINESS</h2>
+<form id="registerForm">
+    <input type="email" id="email" name="email" placeholder="Enter Email" required><br>
+    <input type="password" id="password" name="password" placeholder="Enter Password" required><br>
+    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required><br>
+    <button type="submit">Register</button>
+</form>
+<p><a href="index.html">Already have Account? LogIn</a></p>
+</div>
+<script>
+$(document).ready(function(){
+    $("#registerForm").submit(function(e){
+        e.preventDefault(); // Prevent form submission
+
+        let email = $("#email").val();
+        let password = $("#password").val();
+        let confirm_password = $("#confirm_password").val();
+
+        $.ajax({
+            url: "register.php",
+            type: "POST",
+            data: { email: email, password: password, confirm_password: confirm_password, register: true },
+            dataType: "json",
+            success: function(response) {
+                alert(response.message);
+                if (response.status === "success") {
+                    window.location.href = "verify_otp.html"; // Redirect to OTP verification page
+                }
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

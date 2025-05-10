@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, rgba(78, 67, 118, 0.6), rgba(206, 7, 206, 0.6)), url('image/mainbg.jpg');
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Box */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 320px;
+}
+
+/* Headings */
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #e903af, rgba(78, 67, 118, 0.6));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Buttons */
+button {
+    font-family: monospace;
+    width: 100%;
+    padding: 12px;
+    background: url('image/button.jpg');
+    opacity: 85%;
+    color: rgb(0, 0, 0);
+    border:2px solid black;
+    border-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: url('image/button2.jpg');
+}
+
+/* Links */
+p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+a {
+    color: #020507;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+    }
+}
